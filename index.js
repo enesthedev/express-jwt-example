@@ -27,11 +27,17 @@ app.get('/', (req, res) => res.status(200)
     })
 )
 
-app.get('/verify', (req, res) => {
+app.post('/verify', (req, res) => {
     const { accessToken } = req.body
 
     try {
-        res.json(jwt.verify(accessToken, secret))
+        const credentials = jwt.verify(accessToken, secret)
+        const user = users.find(u => {
+                return u.username === credentials.username
+            }
+        )
+        res.status(200)
+            .json(user)
     } catch (e) {
         res.status(401)
             .json( { message: "JWT does not verified" })
