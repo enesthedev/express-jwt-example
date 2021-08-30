@@ -23,7 +23,11 @@ app.use(express.urlencoded({ extended: true }))
 
 app.get('/', (req, res) => res.status(200)
     .json({
-        message: "Create post request with username and password fields for generate JWT access-token."
+        message: "Create post request to /login with username and password fields for generate JWT access-token. After createing JWT you can verify them to /verify route with accessToken variable.",
+        example: {
+            username: "Armut",
+            password: "pwdmember"
+        }
     })
 )
 
