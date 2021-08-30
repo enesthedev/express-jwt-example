@@ -1,46 +1,65 @@
-const express = require("express");
-const chalk = require("chalk");
-const bodyparser = require("body-parser");
-const jwt = require("jsonwebtoken");
+const express = require("express")
+const bodyparser = require("body-parser")
+const jwt = require("jsonwebtoken")
 
-const app = express();
-const secret = "jwt-secret";
+const app = express()
+const secret = "jwt-secret"
 
 const users = [
     {
         username: 'Enes',
         password: 'pwdadmin',
         role: 'admin'
-    }, {
+    },
+    {
         username: 'Armut',
         password: 'pwdmember',
         role: 'member'
     }
-];
+]
 
-app.use(bodyparser.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(bodyparser.json())
+app.use(express.urlencoded({ extended: true }))
+
+app.get('/', (req, res) => res.status(200)
+    .json({
+        message: "Create post request with username and password fields for generate JWT access-token."
+    })
+)
+
+app.get('/verify', (req, res) => {
+    const { accessToken } = req.body
+
+    try {
+        res.json(jwt.verify(accessToken, secret))
+    } catch (e) {
+        res.status(401)
+            .json( { message: "JWT does not verified" })
+    }
+})
 
 app.post('/login', (req, res) => {
-    const { username, password } = req.body;
-    const user = users.find(u => { return u.username === username && u.password === password });
+    const { username, password } = req.body
 
-    if (user) {
-        const accessToken = jwt.sign({ username: user.username,  role: user.role }, secret);
+    const user = users.find(u => {
+            return u.username === username && u.password === password
+        }
+    )
 
-        res.json({
-            accessToken
-        });
-    } else {
-        res.send('Username or password incorrect');
+    try {
+        if (user) {
+            res.status(200)
+                .json({ accessToken: jwt.sign({ username: user.username }, secret) })
+        } else {
+            throw new Error("password.wrong")
+        }
+    } catch (e) {
+        res.status(401)
+            .json({ message: "Username or password incorrect" })
     }
-});
+})
 
 app.listen(3000, () => {
-    process.stdout.write("\033c");
-    console.log(
-        chalk.yellow.bold("Express JWT Example\n") +
-        chalk.white("Port: ") +
-        chalk.white.bold("3000")
-    );
-});
+    process.stdout.write("\033c")
+    console.log("Express JWT Example <www.github.com/enesbayrktar/express-jwt-example>")
+})

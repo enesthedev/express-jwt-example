@@ -1,19 +1,21 @@
 {
   "name": "express-jwt-example",
+  "author": "Enes Bayraktar <github.com/enesbayrktar>",
+  "license": "ISC",
   "version": "1.0.0",
-  "description": "",
+  "description": "ExpressJS RESTFUL based api for generate JWT tokens",
   "main": "index.js",
   "scripts": {
-    "monit": "pm2 monit"
+    "start" : "node index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "express",
+    "jwt",
+    "express-auth"
+  ],
   "dependencies": {
     "body-parser": "^1.19.0",
-    "chalk": "^4.1.1",
     "express": "^4.17.1",
-    "jsonwebtoken": "^8.5.1",
-    "pm2": "^4.5.6"
+    "jsonwebtoken": "^8.5.1"
   }
 }
