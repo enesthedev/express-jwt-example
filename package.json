@@ -1,0 +1,27 @@
+{
+  "name": "express-jwt-example",
+  "version": "1.0.0",
+  "description": "Example JWT usage for ExpressJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enesthedev/express-jwt-example.git"
+  },
+  "keywords": [
+    "expressjs",
+    "jwttoken"
+  ],
+  "author": "Enes Bayraktar <enes.bayraktar@outlook.com.tr>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/enesthedev/express-jwt-example/issues"
+  },
+  "homepage": "https://github.com/enesthedev/express-jwt-example#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
