@@ -23,5 +23,9 @@
   "homepage": "https://github.com/enesthedev/express-jwt-example#readme",
   "dependencies": {
     "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.23.0",
+    "eslint-config-google": "^0.14.0"
   }
 }
