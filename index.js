@@ -1,12 +1,14 @@
 const express = require('express');
 const jose = require('jose');
 const dotenv = require('dotenv');
+const multer = require('multer');
 
 const {createSecretKey} = require('crypto');
 
 dotenv.config(); // load the environment files
 
 const secretKey = createSecretKey(process.env.JWT_SECRET, 'utf-8');
+const upload = multer({storage: multer.memoryStorage});
 
 // eslint-disable-next-line new-cap
 const router = express.Router();
@@ -19,7 +21,11 @@ router.use((req, res, next) => { // only allowed to xhr requests
   next();
 });
 
+router.use(upload.none());
+router.use(express.json());
+
 router.post('/token', async (req, res) => {
+  console.log(req.body);
   const jwt = await new jose.SignJWT({})
       .setProtectedHeader({alg: 'HS256'})
       .setIssuedAt()
