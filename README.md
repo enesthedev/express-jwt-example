@@ -19,6 +19,10 @@
         <li>Run `npm run dev` to see results.</li>
     </ul>
     <hr/>
+    <h4>High Level Arthitecture</h4>
+    <p>You can find out the high level arthitect of this project at below</p>
+    <img src="https://user-images.githubusercontent.com/16338242/198821076-644d2ba5-f0cc-4b4e-ba00-234a1875a64e.png"/>
+    <hr/>
     <h4>Usage Instructions</h4>
     <p>You can find out the example usage from Postman at below</p>
 </main>
