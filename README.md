@@ -1,32 +1,27 @@
 <p align="right"><a href="https://github.com/enesthedev/express-jwt-example/blob/master/README_TR.md" title="Bu sayfayı Türkçe olarak görüntüle" target="_blank"><img height="20" src="https://github.com/enesthedev/art/blob/master/see-at-turkish.ico"/></a></p>
 
-<main align="left">
-    <h3>Express JWT Example</h3>
-    <p>Example JSON Web Token usage in Express HTTP server.</p>
-    <hr />
-    <h4>Requirements</h4>
-    <ul>
-        <li>Node 16.x LTS</li>
-        <li>ESLint (optional)</li>
-    </ul>
-    <hr/>
-    <h4>Install Instructions</h4>
-    <ul>
-        <li>Clone the package</li>
-        <li>Run `npm install`</li>
-        <li>Copy .env.example as .env</li>
-        <li>Set JWT_SECRET variable as string inside in .env file</li>
-        <li>Run `npm run dev` to see results.</li>
-    </ul>
-    <hr/>
-    <h4>High Level Arthitecture</h4>
-    <p>You can find out the high level arthitect of this project at below.</p>
-    <img src="https://user-images.githubusercontent.com/16338242/198821076-644d2ba5-f0cc-4b4e-ba00-234a1875a64e.png"/>
-    <hr/>
-    <h4>Usage Instructions</h4>
-    <p>You can find out the example usage from Postman at below.</p>
-</main>
-   
+# ExpressJS JWT Example
+JSON Web Token (JWT) usage in ExpressJS server.
+
+### Requirements
+
+- Node 16.x
+
+### Install Instructions
+
+- Clone the package
+- Run `npm install`
+- Copy .env.example as .env
+- Set JWT_SECRET variable as string inside in .env file
+- Run `npm run dev` to see results
+
+### High Level Arthitecture
+You can find out the high level arthitecture of this project at below image.
+![](https://user-images.githubusercontent.com/16338242/198821076-644d2ba5-f0cc-4b4e-ba00-234a1875a64e.png)
+
+### Usage Instructions
+You can find out the example usage from Postman at below code section.
+
 ```json
 {
   "info": {

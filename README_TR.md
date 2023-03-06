@@ -1,26 +1,23 @@
-<main align="left">
-    <h3>Express JWT Örneği</h3>
-    <p>JSON Web Token kullanımını örnek olarak gösterdiğim ExpressJS aplikasyonu.</p>
-    <hr />
-    <h4>Gereklilikler</h4>
-    <ul>
-        <li>Node 16.x LTS</li>
-        <li>ESLint (opsiyonel)</li>
-    </ul>
-    <hr/>
-    <h4>Kurulum Yönergeleri</h4>
-    <ul>
-        <li>Paketi bilgisayarınıza indirin (git clone)</li>
-        <li>`npm install` komutunu çalıştırın</li>
-        <li>.env.example dosyasını .env olarak dizine kopyalayın</li>
-        <li>.env dosyası içerisindeki JWT_SECRET değişkenini herhangi bir string olarak belirleyin</li>
-        <li>`npm run dev` komutu ile uygulamayı başlatın</li>
-    </ul>
-    <hr/>
-    <h4>Kullanım Yönergeleri</h4>
-    <p>Postman ile oluşturulmuş bir koleksiyonun JSON çıktısını alt tarafta bulabilirsiniz. İstekler ve adresler alt taraftaki JSON içerisinde bulunmaktadır.</p>
-</main>
-   
+<p align="right"><a href="https://github.com/enesthedev/express-jwt-example/blob/master/README_TR.md" title="Bu sayfayı Türkçe olarak görüntüle" target="_blank"><img height="20" src="https://github.com/enesthedev/art/blob/master/see-at-turkish.ico"/></a></p>
+
+# ExpressJS JWT Örneği
+JSON Web Token kullanımını örnek olarak gösterdiğim ExpressJS aplikasyonu.
+
+### Gereklilikler
+
+- Node 16.x
+
+### Kurulum Yönergeleri
+
+- Paketi bilgisayarınıza indirin (git clone)
+- `npm install` komutunu çalıştırın
+- .env.example dosyasını .env olarak dizine kopyalayın
+- .env dosyası içerisindeki JWT_SECRET değişkenini herhangi bir string olarak belirleyin
+- `npm run dev` komutu ile uygulamayı başlatın
+
+### Kullanım Yönergeleri
+Postman ile oluşturulmuş bir koleksiyonun JSON çıktısını alt tarafta bulabilirsiniz. İstekler ve adresler alt taraftaki JSON içerisinde bulunmaktadır.
+
 ```json
 {
   "info": {
