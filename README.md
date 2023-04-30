@@ -15,7 +15,7 @@ JSON Web Token (JWT) usage in ExpressJS server.
 - Set JWT_SECRET variable as string inside in .env file
 - Run `npm run dev` to see results
 
-### High Level Arthitecture
+### High Level Arthitecture
 You can find out the high level arthitecture of this project at below image.
 ![](https://user-images.githubusercontent.com/16338242/198821076-644d2ba5-f0cc-4b4e-ba00-234a1875a64e.png)
 
